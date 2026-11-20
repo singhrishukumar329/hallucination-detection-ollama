@@ -1,0 +1,6 @@
+ollama
+datasets
+pandas
+scikit-learn
+matplotlib
+tqdm
