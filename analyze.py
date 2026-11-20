@@ -61,6 +61,10 @@ ax[1].plot(kab.k, kab.acc, marker="o", label="accuracy")
 ax[1].plot(kab.k, kab.f1, marker="o", label="F1")
 ax[1].set(xlabel="K sampled references", title="Effect of K")
 ax[1].legend()
+for a in ax:
+    a.axhline(0.5, color="gray", ls="--", lw=1, label="chance accuracy (0.5)")
+    a.axhline(2/3, color="red", ls=":", lw=1, label="flag-everything F1 (0.67)")
+    a.legend(fontsize=8)
 plt.tight_layout()
 plt.savefig("results/detection_plots.png", dpi=150)
 
